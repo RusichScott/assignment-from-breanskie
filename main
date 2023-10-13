@@ -18,27 +18,27 @@ public class Main {
    }
    
    //опирации нашего калькулятора ( прописываем способы нашего колькулятора, вводим переменную, после чего нужно задать условие и действие переменной ) 
-   
-   public static double solve(double a, double b, char op){
-        double anser = 0;
-        if (op == '+') {
-            anser = a + b;
-        }
-        else if (op == '-') {
-            anser = a - b;
-        }
-        else if (op == '*') {
-            anser = a * b;
-        }
-        else if (op == '%') {
-            anser = a % b;
-        }
-        else if (op == '/') {
-        }
 
-   //получение ответа
-
-        System.out.println("Получай неуч - " + anser);
-        return anser;
+   //upd. вместо условий по типу "if (op == '+') {anser = a + b;}", добавлены case'ы
+  public static int calc(int num1, int num2, char operation){
+        int result;
+        switch (operation){
+            case '+':
+                result = num1+num2;
+                break;
+            case '-':
+                result = num1-num2;
+                break;
+            case '*':
+                result = num1*num2;
+                break;
+            case '/':
+                result = num1/num2;
+                break;
+            default:
+                System.out.println("Операция не распознана. Повторите ввод.");
+                result = calc(num1, num2, getOperation());//рекурсия
+        }
+        return result;
     }
 }
