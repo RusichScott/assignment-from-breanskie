@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-   //создаём переменные для калькулятора 
+   //создаём данные для калькулятора ( прописываем несколько переменных для решение премера )
 
 public class Main {
    public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main {
       solve(a,b,op);
    }
    
-   //прописываем опирации нашего калькулятора 
+   //опирации нашего калькулятора ( прописываем способы нашего колькулятора, вводим переменную, после чего нужно задать условие и действие переменной ) 
    
    public static double solve(double a, double b, char op){
         double anser = 0;
@@ -35,6 +35,9 @@ public class Main {
         }
         else if (op == '/') {
         }
+
+   //получение ответа
+
         System.out.println("Получай неуч - " + anser);
         return anser;
     }
