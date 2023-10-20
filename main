@@ -40,5 +40,6 @@ public class Main {
                 result = calc(num1, num2, getOperation());//рекурсия
         }
         return result;
+        System.out.println("Лёха попуска кто не знал");
     }
 }
